@@ -1,6 +1,7 @@
 require('plugins')
 
-require('configs/indent-blankline-conf')
+require('configs.indent-blankline-conf')
+require('configs.complete')
 
 require('options')
 
