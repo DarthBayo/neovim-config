@@ -7,14 +7,15 @@ opt.mouse = 'a'                       -- Enable mouse support
 opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
+vim.cmd[[colorscheme dracula]]
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.syntax = 'on'
-vim.opt.list = true
-vim.opt.listchars:append "eol:↴"
-vim.opt.listchars:append "space:⋅"
+opt.list = true
+opt.listchars:append "eol:↴"
+opt.listchars:append "space:⋅"
 opt.number = true           -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
