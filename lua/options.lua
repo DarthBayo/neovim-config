@@ -3,18 +3,18 @@ local opt = vim.opt
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-opt.mouse = 'a'                       -- Enable mouse support
-opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
-opt.swapfile = false                  -- Don't use swapfile
+opt.mouse = 'a'                                -- Enable mouse support
+opt.clipboard = 'unnamedplus'                  -- Copy/paste to system clipboard
+opt.swapfile = false                           -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
-vim.cmd[[colorscheme dracula]]
+vim.cmd[[colorscheme default]]                 -- Default theme
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.syntax = 'on'
 opt.list = true
-opt.listchars:append "eol:↴"
+opt.listchars:append "eol:|"
 opt.listchars:append "space:⋅"
 opt.number = true           -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
@@ -26,14 +26,14 @@ opt.ignorecase = true       -- Ignore case letters when search
 opt.smartcase = true        -- Ignore lowercase for the whole pattern
 opt.linebreak = true        -- Wrap on word boundary
 opt.termguicolors = true    -- Enable 24-bit RGB colors
-opt.laststatus = 3            -- Set global statusline
+opt.laststatus = 3          -- Set global statusline
 
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = true        -- Use spaces instead of tabs
-opt.shiftwidth = 4          -- Shift 4 spaces when tab
-opt.tabstop = 4             -- 1 tab == 4 spaces
+opt.shiftwidth = 2          -- Shift 2 spaces when tab
+opt.tabstop = 2             -- 1 tab == 2 spaces
 opt.smartindent = true      -- Autoindent new lines
 
 -----------------------------------------------------------
