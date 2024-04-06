@@ -52,6 +52,5 @@ install_dependencies_start "telescope" "https://github.com/nvim-telescope/telesc
 # Install Plenary
 install_dependencies_start "plenary" "https://github.com/nvim-lua/plenary.nvim.git" "v0.1.4"
 
-BOLD="\033[1;33m"
 GREEN="\033[0;32m"
-echo -e "${BOLD}${GREEN}\nInstallation completed"
+echo -e "${GREEN}\nInstallation completed"

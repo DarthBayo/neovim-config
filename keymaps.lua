@@ -2,7 +2,7 @@
 vim.g.mapleader = '\\'
 
 -----------------------------------------------------------
--- Normal keys
+-- NORMAL KEYS
 -----------------------------------------------------------
 vim.keymap.set('n', '<leader>w', ':w<cr>')
 vim.keymap.set('n', '<leader>q', ':q<cr>')
