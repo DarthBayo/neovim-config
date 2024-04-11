@@ -1,18 +1,29 @@
 #! /bin/bash
 
 exit_if_not_exists () {
-  if ! command -v ${1} &> /dev/null
+  COMMAND=$1
+  PACKAGE_NAME=$2
+
+  if ! command -v ${COMMAND} &> /dev/null
   then
-    echo "$1 could not be found"
-    exit 1
+    echo "Installing $COMMAND"
+    sudo apt install $PACKAGE_NAME
+  else
+    echo "$PACKAGE_NAME already exists"
   fi
 }
 
 ## Check if neovim exists
-exit_if_not_exists "nvim"
+exit_if_not_exists "nvim" "neovim"
 
 ## Check if git exists
-exit_if_not_exists "git"
+exit_if_not_exists "git" "git"
+
+## Check if fd-find exists
+exit_if_not_exists "find" "fd-find"
+
+## Check if rg exists
+exit_if_not_exists "rg" "ripgrep"
 
 install_dependencies_start () {
   PLUGIN_NAME=$1
@@ -51,6 +62,19 @@ install_dependencies_start "telescope" "https://github.com/nvim-telescope/telesc
 
 # Install Plenary
 install_dependencies_start "plenary" "https://github.com/nvim-lua/plenary.nvim.git" "v0.1.4"
+
+# Install Plenary
+install_dependencies_start "plenary" "https://github.com/nvim-lua/plenary.nvim.git" "v0.1.4"
+
+# Install lspconfig
+install_dependencies_start "lspconfig" "https://github.com/neovim/nvim-lspconfig.git" "v0.1.5"
+
+# Install mason
+install_dependencies_start "mason" "https://github.com/williamboman/mason.nvim.git" "v1.10.0"
+
+# Install mason-lspconfig
+install_dependencies_start "mason-lspconfig" "https://github.com/williamboman/mason-lspconfig.nvim.git" "v1.27.0"
+
 
 GREEN="\033[0;32m"
 echo -e "${GREEN}\nInstallation completed"

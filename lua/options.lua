@@ -7,16 +7,19 @@ opt.mouse = 'a'                                -- Enable mouse support
 opt.clipboard = 'unnamedplus'                  -- Copy/paste to system clipboard
 opt.swapfile = false                           -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
-vim.cmd[[colorscheme default]]                 -- Default theme
+opt.breakindent = true                         -- Enable break indent
+opt.undofile = true                            -- Save undo history
+opt.scrolloff = 30                             -- Minimal number of screen lines to keep above and below the cursor
+opt.hlsearch = true                            -- Set highlight on search, but clear on pressing <Esc> in normal mode
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.syntax = 'on'
 opt.list = true
-opt.listchars:append "eol:|"
-opt.listchars:append "space:⋅"
+opt.listchars = { tab = '» ', trail = '·', nbsp = '␣', eol = '|', space = '~' }
 opt.number = true           -- Show line number
+-- opt.relativenumber = true --
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
 opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
