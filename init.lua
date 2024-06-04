@@ -173,10 +173,10 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Using explore
-vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>ev", vim.cmd.Ve)
-vim.keymap.set("n", "<leader>eh", vim.cmd.He)
-vim.keymap.set("n", "<leader>er", vim.cmd.Re)
+vim.keymap.set("n", "<leader>xe", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>xv", vim.cmd.Ve)
+vim.keymap.set("n", "<leader>xh", vim.cmd.He)
+vim.keymap.set("n", "<leader>xr", vim.cmd.Re)
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
